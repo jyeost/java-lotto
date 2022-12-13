@@ -12,8 +12,9 @@ public class AutoLotteries {
     public AutoLotteries(int lottoCount) {
         for (int i = 0; i < lottoCount; i++) {
             List<Integer> numbers = Randoms.pickUniqueNumbersInRange(LottoNumber.MIN_NUMBER, LottoNumber.MAX_NUMBER, Lotto.LOTTO_SIZE);
-            Collections.sort(numbers);
-            autoLotteries.add(new Lotto(numbers));
+            List<Integer> copyOfNumbers = new ArrayList<>(numbers);
+            Collections.sort(copyOfNumbers);
+            autoLotteries.add(new Lotto(copyOfNumbers));
         }
     }
 

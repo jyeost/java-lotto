@@ -17,7 +17,7 @@ public class OutputView implements Output {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i < lotto.getSize(); i++) {
             sb.append(lotto.get(i).toString());
-            if (i != lotto.getSize() - 1) sb.append(",");
+            if (i != lotto.getSize() - 1) sb.append(", ");
         }
         sb.append("]");
         System.out.println(sb);

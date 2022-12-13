@@ -30,9 +30,10 @@ public enum Rank {
 
     public static String printRank(Rank rank, Integer countOfMatch) {
         DecimalFormat df = new DecimalFormat("###,###");
-        if (rank == Rank.SECOND)
-            return rank.countOfMatch + "개 일치, 보너스볼 일치 (" + df.format(rank.prizeMoney) + ") - " + countOfMatch + "개" + System.lineSeparator();
-        return rank.countOfMatch + "개 일치 (" + df.format(rank.prizeMoney) + ") - " + countOfMatch + "개" + System.lineSeparator();
+        if (rank == Rank.SECOND) {
+            return rank.countOfMatch + "개 일치, 보너스 볼 일치 (" + df.format(rank.prizeMoney) + "원) - " + countOfMatch + "개" + System.lineSeparator();
+        }
+        return rank.countOfMatch + "개 일치 (" + df.format(rank.prizeMoney) + "원) - " + countOfMatch + "개" + System.lineSeparator();
     }
 
 
